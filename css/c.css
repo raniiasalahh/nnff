@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.938rem;
+  background-color: white;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  transition: 0.8s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2,
+h3 {
+  color: black;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.box {
+  position: relative;
+  width: 1080px;
+  height: 650px;
+  cursor: default;
+  inset: 0px;
+  box-sizing: border-box;
+  background-image: url(/images/rr.jpg);
+  background-size: cover;
+  margin-left: 30rem;
+  margin-top: 2rem;
+  margin-right: 30rem;
+  margin-bottom: 30rem;
+  border-radius: 8%;
+}
+
+.container {
+  max-width: 968px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.profile {
+  position: relative;
+  padding-top: 3.5rem;
+}
+
+.profile__container {
+  row-gap: 0.8rem;
+}
+
+.profile__data {
+  display: grid;
+  text-align: center;
+}
+
+.profile__perfil {
+  width: 111px;
+  height: 111px;
+  background: black;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex;
+  justify-content: center;
+}
+
+.profile__perfil img {
+  width: 75px;
+}
+
+.profile__border {
+  border: 4px solid;
+  color: rgb(0, 0, 0);
+  justify-self: center;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-top: 3.5rem;
+}
+
+.profile__name {
+  font-size: 2rem;
+}
+
+.profile__profession {
+  margin-top: -8px;
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: black;
+}
+
+.profile__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.75rem;
+}
+
+.profile__social-link {
+  font-size: 2rem;
+  color: black;
+  transition: 0.3s;
+  padding: 0.25rem;
+}
+
+.profile__social-link:hover {
+  color: rgb(55, 102, 103);
+}
+
+.footer__copy {
+  display: block;
+  margin: 2.5rem 0 2rem;
+  text-align: center;
+  font-size: 0.75rem;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(24, 21, 29);
+}
+
+.bx {
+  position: absolute;
+  border-radius: 12px;
+  top: 0;
+  left: 50%;
+  height: 500px;
+  width: 350px;
+  transform: translate(-50%, -50%) scale(0.1);
+  margin: 0 auto;
+  text-align: center;
+  padding: 18px;
+  background-color: #fcfcfc;
+  visibility: hidden;
+  transition: transform 0.4s top 0.4s;
+}
+
+.open-bx {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.close-bx {
+  visibility: hidden;
+  top: 0;
+  transform: translate(-50%, -50%) scale(0.1);
+}
+
+.circle .register-head {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 6px;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.circle .register-body {
+  display: inline-block;
+  width: 35px;
+  margin: 0 auto;
+  margin-top: 26px;
+  height: 25px;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  color: rgb(0, 0, 0);
+  font-size: 34px;
+}
+
+.close:hover {
+  background-color: rgb(55, 102, 103);
+  border-radius: 0 12px 0 0;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.registration-box {
+  margin-top: 43px;
+}
+
+label {
+  display: block;
+  position: absolute;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  margin-top: -62px;
+  margin-left: 18px;
+  text-align: left;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+input {
+  width: 95%;
+  height: 42px;
+  margin: 10px 1px 28px 1px;
+  padding: 9px;
+  font-size: 18px;
+  color: #555;
+  border: rgb(238, 221, 221) 1px solid;
+  outline: none;
+  border-radius: 5px;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  margin-top: -95px;
+  padding-left: 8px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+.circle {
+  position: absolute;
+  margin: 0 auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  top: -35px;
+  right: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  border: 2px #fff solid;
+}
+
+.bx .circle,
+.bx span {
+  display: inline-block;
+  position: absolute;
+}
+
+.bx span {
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+}
+
+.body-text {
+  height: 2px;
+  line-height: 25px;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  border-radius: 5rem;
+  transition: 0.3s;
+  box-shadow: 0 8px 24px;
+  padding: 10px 60px;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-left: 45px;
+  margin-right: 45px;
+  margin-bottom: 2rem;
+}
+
+button i {
+  font-size: 1.25rem;
+}
+
+button:hover {
+  background-color: rgb(55, 102, 103);
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  button {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}
